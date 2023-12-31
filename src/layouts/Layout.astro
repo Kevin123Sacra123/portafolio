@@ -1,0 +1,190 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+---
+
+<!doctype html>
+<html lang="en" class="fondo" id="Pagina">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<nav class="text-white m-10">
+			<div>
+				<div class="text-center justify-center hidden">
+					<i class=" m-2 text-5xl text-white text-center fa-regular fa-user"></i>
+					<h1 id="hora" class="text-5xl text-white text-center"> Kevin</h1>
+
+				</div>
+			</div>
+			<div class="text-2xl text-center flex flex-row">
+				<a href="#Inicio"><i class="fa-solid fa-house"></i> Inicio</a>
+				<a href="#Sobre"><i class="fa-solid fa-circle-user"></i> Sobre mi</a>
+				<a href="#Conocimientos"><i class="fa-solid fa-pencil"></i> Habilidades</a>
+				<a href="#Proyectos"><i class="fa-solid fa-folder"></i> Proyectos</a>
+				<a href="#Contacto"><i class="fa-solid fa-paper-plane"></i> Contacto</a>
+			</div>
+		</nav>
+		<slot />
+	</body>
+	<script>
+
+		let numero = getRandomInt();
+		let fondo = document.querySelector("#Pagina");
+		let Inicio1 = document.getElementById("Inicio1");
+		let boton = document.getElementById("aleatorio");
+		let Cartas1 = document.getElementById("CartaProyecto1");
+		let Cartas2 = document.getElementById("CartaProyecto2");
+		let Cartas3 = document.getElementById("CartaProyecto3");
+		function getRandomInt() {
+		  		return Math.floor(Math.random() * 5);
+		}	
+		switch (numero){
+			case 0: 
+				console.log("0");
+				fondo.classList.add("fondo4");
+				Inicio1.classList.add("fondo");
+				Cartas1.classList.add("fondo5");
+				Cartas2.classList.add("fondo4");
+				Cartas3.classList.add("fondo3");
+				break;
+			case 1: 
+				console.log("1");
+				fondo.classList.add("fondo5");
+				Inicio1.classList.add("fondo1");
+				Cartas1.classList.add("fondo4");
+				Cartas2.classList.add("fondo3");
+				Cartas3.classList.add("fondo2");
+				break;
+			case 2: 
+				console.log("2");
+				fondo.classList.add("fondo6");
+				Inicio1.classList.add("fondo2");
+				Cartas1.classList.add("fondo3");
+				Cartas2.classList.add("fondo2");
+				Cartas3.classList.add("fondo1");
+				break;
+			case 3: 
+				console.log("3");
+				fondo.classList.add("fondo7");
+				Inicio1.classList.add("fondo3");
+				Cartas1.classList.add("fondo2");
+				Cartas2.classList.add("fondo1");
+				Cartas3.classList.add("fondo");
+				break;
+			case 4: 
+				console.log("4");
+				fondo.classList.add("fondo8");
+				Inicio1.classList.add("fondo4");
+				Cartas1.classList.add("fondo1");
+				Cartas2.classList.add("fondo");
+				Cartas3.classList.add("fondo4");
+				break;
+			case 5: 
+				console.log("5");
+				fondo.classList.add("fondo9");
+				Inicio1.classList.add("fondo5");
+				Cartas1.classList.add("fondo");
+				Cartas2.classList.add("fondo5");
+				Cartas3.classList.add("fondo5");
+				break;
+		}
+
+	</script>
+</html>
+<style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Roboto');
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html {
+		font-family: 'Roboto';
+		margin-inline: 1.5%	
+	}
+	code{
+		font-family: Roboto;
+	}
+	nav{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	nav a{
+		margin: 0.5rem;
+		transition: 100ms;
+	}
+	nav a:hover {
+		text-shadow: 0rem 0rem 0.5rem rgba(255, 255, 255);
+		transition: 100ms;
+	}
+	.brillo{
+        text-shadow: 0rem 0rem 1rem white;
+    }
+
+	.fondo{
+		background: rgb(9,9,119);
+		background: linear-gradient(0deg, rgba(9,9,119,1) 0%, rgba(0,212,255,1) 100%);
+	} 
+
+	.fondo1{        
+        background: rgb(0,212,255);
+        background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(9,9,119,1) 100%);
+    }
+    .fondo2{
+        background: rgb(9,9,119);
+        background: radial-gradient(circle, rgba(9,9,119,1) 50%, rgba(0,212,255,1) 100%);
+    }
+
+	.fondo3{
+		background: rgb(0,212,255);
+		background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(9,9,119,1) 50%);
+	}
+
+	.fondo4{
+		background: rgb(0,212,255);
+		background: linear-gradient(0deg, rgba(0,212,255,1) 0%, rgba(9,9,119,1) 50%);
+	}
+	.fondo5{
+		background: rgb(0,212,255);
+		background: linear-gradient(0deg, rgba(0,212,255,1) 50%, rgba(9,9,119,1) 100%);
+	}
+	.fondo6{
+		background: rgb(0,212,255);
+		background: linear-gradient(0deg, rgba(0,212,255,1) 0%, rgba(9,9,119,1) 25%);
+	}
+
+	.fondo7{
+		background: rgb(0,212,255);
+		background: linear-gradient(0deg, rgba(0,212,255,1) 0%, rgba(9,9,119,1) 25%, rgba(0,0,0,1) 100%);
+	}
+	.fondo8{
+		background: rgb(0,212,255);
+		background: linear-gradient(0deg, rgba(0,212,255,1) 0%, rgba(9,9,119,1) 50%, rgba(0,0,0,1) 100%);
+	}
+	.fondo9{
+		background: rgb(0,212,255);
+		background: linear-gradient(0deg, rgba(0,212,255,1) 0%, rgba(9,9,119,1) 75%, rgba(0,0,0,1) 100%);
+	}
+
+	/*
+	
+
+	*/
+</style>

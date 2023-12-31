@@ -1,0 +1,234 @@
+---
+import Layout from '../layouts/Layout.astro';
+import avatar from '../images/avatar.jpg';
+//proyectos
+import calculadora from '../images/calculadora.jpg';
+import crud from '../images/CRUD.jpg';
+import juegosJS from '../images/gamesJS.jpg';
+import cv from '../Curriculum Vitae.pdf';
+
+---
+
+<Layout title="Portafolio">
+    <section id="Inicio" class="Inicio flex justify-center">
+        <div id="Inicio1" class="max-w-3xl flex flex-col md:flex-row p-2 rounded-2xl border-4 border-white ">
+            <div class="flex items-center justify-center">
+                <img alt="personaje" class="p-5 rounded-full" src={avatar.src}>
+            </div>
+            <div class="block">
+                <h1 class="m-8 text-6xl text-center text-white">Kevin Sacramento</h1>
+                <p class="m-5 text-slate-50 text-center text-lg" >
+                    Estudiante de Desarrollo de software
+                </p>
+                <div class="flex items-center justify-center text-center text-white text-4xl">
+                    <a href="https://github.com/Kevin123Sacra123" target="_blank">
+                        <i class="fa-brands fa-github brillo"></i>
+                    </a>
+                </div>    
+            </div>
+        </div>
+    </section>
+    <h1 id="Sobre" class="m-10 text-6xl text-white text-center" >Sobre mi</h1>
+    <section class="Sobre">
+        <p class="m-5 text-slate-50 text-center text-lg mx-20 md:mx-80" >
+            soy <strong class="brillo">Kevin Jair</strong> , estudiante de programacion, con interes en la animacion con javascript y capacidad del backend, obsesionado con combinar tecnologias frontend y backend y tambien en la creacion de videojuegos con Unity, Godot y GameMaker 2.
+        </p>
+        <div class="block sm:items-center sm:flex sm:justify-center">
+            <div class="block m-3">
+                <h1 class="m-10 text-4xl text-white text-center" >Datos personales</h1>
+                <div class="text-center sm:text-start">
+                    <h1 class="m-5 text-xl text-white" ><i class="brillo m-2 fa-solid fa-cake-candles"></i> 07/03/2005</h1>
+                    <h1 class="m-5 text-xl text-white" ><i class="brillo m-2 fa-solid fa-phone"></i>+51 950 366 232 </h1>
+                    <h1 class="m-5 text-xl text-white" ><i class="brillo m-2 fa-regular fa-envelope"></i>ksacramentojuarez@gmail.com </h1>
+                    <h1 class="m-5 text-xl text-white" ><i class="brillo m-2 fa-solid fa-earth-americas"></i></i>Peru - Callao </h1>
+                </div>
+            </div>
+            <div class="block m-3">
+                <h1 class="m-10 text-4xl text-white text-center" >Intereses</h1>
+                <div class="grid grid-cols-2 gap-0 md:grid-cols-3 md:gap-2">
+                    <div class="border-white border-4 text-white justify-center text-center rounded-lg m-1 hover:border-red-600 hover:text-red-400 hover:shadow-xl hover:shadow-white">
+                        <i class="m-2 text-4xl fa-solid fa-gamepad"></i>
+                        <h1 class="m-2 text-xl">Videojuegos</h1>
+                    </div>
+                    <div class="border-white border-4 text-white justify-center text-center rounded-lg m-1 hover:border-orange-600 hover:text-orange-400 hover:shadow-xl hover:shadow-white">
+                        <i class="m-2 text-4xl fa-solid fa-dice"></i>
+                        <h1 class="m-2 text-xl">Juegos de mesa</h1>
+                    </div>
+                    <div class="border-white border-4 text-white justify-center text-center rounded-lg m-1 hover:border-yellow-600 hover:text-yellow-400 hover:shadow-xl hover:shadow-white">
+                        <i class="m-2 text-4xl fa-solid fa-palette"></i>
+                        <h1 class="m-2 text-xl">Pixelart</h1>
+                    </div>
+                    <div class="border-white border-4 text-white justify-center text-center rounded-lg m-1 hover:border-green-600 hover:text-green-400 hover:shadow-xl hover:shadow-white">
+                        <i class="m-2 text-4xl fa-solid fa-headphones"></i>
+                        <h1 class="m-2 text-xl">Musica</h1>
+                    </div>
+                    <div class="border-white border-4 text-white justify-center text-center rounded-lg m-1 hover:border-cyan-600 hover:text-cyan-400 hover:shadow-xl hover:shadow-white">
+                        <i class="m-2 text-4xl fa-solid fa-laptop-code"></i>
+                        <h1 class="m-2 text-xl">Programación</h1>
+                    </div>
+                    <div class="border-white border-4 text-white justify-center text-center rounded-lg m-1 hover:border-blue-600 hover:text-blue-400 hover:shadow-xl hover:shadow-white">
+                        <i class="m-2 text-4xl fa-solid fa-book-open-reader"></i>
+                        <h1 class="m-2 text-xl">Leer</h1>
+                    </div>
+                    <div class="border-white border-4 text-white justify-center text-center rounded-lg m-1 hover:border-purple-600 hover:text-purple-400 hover:shadow-xl hover:shadow-white">
+                        <i class="m-2 text-4xl fa-solid fa-bowl-food"></i>
+                        <h1 class="m-2 text-xl">Cocinar</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="m-10 text-4xl text-white text-center" >Curriculum Vitae</h1>
+        <div class="flex items-center justify-center">
+            <a class="flex items-center justify-center text-2xl text-white border-white border-4 rounded-3xl hover:shadow-2xl hover:shadow-white" href={cv} download="Curriculum Vitae.pdf">
+                <h1 class="m-4">Descargar CV</h1>
+                <i class="m-4 fa-solid fa-download"></i>
+            </a>
+        </div>
+
+    </section>
+    <h1 id="Conocimientos" class="m-10 text-6xl text-white text-center" >Habilidades</h1>
+    <section class="Conocimientos block md:flex sm:justify-around">
+        <div>
+            <h1 class="m-10 text-4xl text-white text-center" >Tecnicas</h1>
+            <div class="flex flex-wrap justify-center items-center">
+                <div class="grid grid-cols-3 gap-2 md:grid-cols-4">
+                    <i class="text-8xl text-orange-500 fa-brands fa-html5"></i>
+                    <i class="text-8xl text-cyan-400 fa-brands fa-css3-alt"></i>
+                    <i class="text-8xl text-yellow-300 fa-brands fa-js"></i>
+                    <i class="text-8xl text-purple-600 fa-brands fa-php"></i>
+                    <i class="text-8xl text-orange-700 fa-brands fa-java"></i>
+                    <i class="text-8xl text-blue-400 fa-solid fa-database"></i>
+                    <i class="text-8xl text-violet-600 fa-brands fa-bootstrap"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                        <path fill="#00acc1" d="M24,9.604c-6.4,0-10.4,3.199-12,9.597c2.4-3.199,5.2-4.398,8.4-3.599 c1.826,0.456,3.131,1.781,4.576,3.247C27.328,21.236,30.051,24,36,24c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.6 c-1.825-0.456-3.13-1.781-4.575-3.247C32.672,12.367,29.948,9.604,24,9.604L24,9.604z M12,24c-6.4,0-10.4,3.199-12,9.598 c2.4-3.199,5.2-4.399,8.4-3.599c1.825,0.457,3.13,1.781,4.575,3.246c2.353,2.388,5.077,5.152,11.025,5.152 c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.599c-1.826-0.456-3.131-1.781-4.576-3.246C20.672,26.764,17.949,24,12,24 L12,24z"></path>
+                    </svg>
+                    <i class="text-8xl text-cyan-500 fa-brands fa-react"></i>
+                    <i class="text-8xl text-red-700 fa-brands fa-laravel"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                        <path fill="#8bc34a" d="M43.982,23.635c0.069-4.261-0.891-9.328-2.891-15.273l-1.568-4.662l-2.13,4.433 c-0.114,0.237-0.244,0.469-0.38,0.698C33.514,5.827,28.974,4,24,4C12.954,4,4,12.954,4,24c0,11.046,8.954,20,20,20s20-8.954,20-20 C44,23.877,43.984,23.758,43.982,23.635z"></path><path fill="#fff" d="M39.385 32.558c-3.123 4.302-8.651 4.533-13.854 4.442H18.75h-1.938c4.428-1.593 7.063-1.972 9.754-3.4 5.068-2.665 10.078-8.496 11.121-14.562-1.93 5.836-7.779 10.85-13.109 12.889-3.652 1.393-10.248 2.745-10.248 2.745l-.267-.145C9.573 32.268 9.437 22.214 17.6 18.968c3.574-1.423 6.993-.641 10.854-1.593 4.122-1.012 8.89-4.208 10.83-8.375C41.456 15.667 44.07 26.106 39.385 32.558L39.385 32.558zM15.668 38.445C15.386 38.795 14.955 39 14.505 39c-.823 0-1.495-.677-1.495-1.5s.677-1.5 1.495-1.5c.341 0 .677.118.941.336C16.086 36.855 16.186 37.805 15.668 38.445L15.668 38.445z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1 class="m-10 text-4xl text-white text-center">Profesionales</h1>
+            <div class="">
+                <div class="grid grid-cols-2 gap-1">
+                    <div class="m-2 p-2 border-white border-4 rounded-lg text-center text-white hover:shadow-2xl hover:shadow-white">
+                        <h1 class="m-2 text-2xl">Adaptibilidad</h1>
+                    </div>
+                    <div class="m-2 p-2 border-white border-4 rounded-lg text-center text-white hover:shadow-2xl hover:shadow-white">
+                        <h1 class="m-2 text-2xl">Gestión del estrés</h1>
+                    </div>
+                    <div class="m-2 p-2 border-white border-4 rounded-lg text-center text-white hover:shadow-2xl hover:shadow-white">
+                        <h1 class="m-2 text-2xl">Trabajo en equipo</h1>
+                    </div>
+                    <div class="m-2 p-2 border-white border-4 rounded-lg text-center text-white hover:shadow-2xl hover:shadow-white">
+                        <h1 class="m-2 text-2xl">Automotivación</h1>
+                    </div>
+                    <div class="m-2 p-2 border-white border-4 rounded-lg text-center text-white hover:shadow-2xl hover:shadow-white">
+                        <h1 class="m-2 text-2xl">Comunicacion</h1>
+                    </div>
+                    <div class="m-2 p-2 border-white border-4 rounded-lg text-center text-white hover:shadow-2xl hover:shadow-white">
+                        <h1 class="m-2 text-2xl">Aprendizaje activo</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <h1 id="Proyectos" class="m-10 text-6xl text-white text-center" >Proyectos</h1>
+    <section class="Proyectos">
+        <div class="grid gap-3 mx-4 grid-cols-1 sm:mx-20" >
+            <a id="CartaProyecto1" class="h-96 bg-cyan-700 flex items-center justify-around m-6 p-6 rounded-2xl border-4 border-white" href="https://kevin123sacra123.github.io/calculadoraReact/" target="_blank">
+                <div class="h-80">
+                    <img class="h-full w-full m-auto rounded-3xl" alt="luego se me ocurre algo" src={calculadora.src}>
+                </div>
+                <div class="block justify-center p-5 items-center">
+                    <h1 class="text-right text-5xl text-white m-5 brillo">Calculadora</h1>
+                    <div class="m-5 grid grid-cols-2 gap-2">
+                        <i class="text-8xl text-cyan-500 fa-brands fa-react"></i>
+                        <i class="text-8xl text-violet-600 fa-brands fa-bootstrap"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a id="CartaProyecto2" class="h-96 bg-cyan-700 flex items-center justify-around m-6 p-6 rounded-2xl border-4 border-white" href="https://kevin123sacra123.github.io/galeriaGamesJS/" target="_blank">
+                <div class="h-80">
+                    <img class="h-full w-full m-auto rounded-3xl" alt="luego se me ocurre algo" src={juegosJS.src}>
+                </div>
+                <div class="block justify-center p-5 items-center">
+                    <h1 class="text-right text-5xl text-white m-5 brillo">Juegos con javascript</h1>
+                    <div class="m-5 grid grid-cols-2 gap-2">
+                        <i class="text-8xl text-orange-500 fa-brands fa-html5"></i>
+                        <i class="text-8xl text-cyan-400 fa-brands fa-css3-alt"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                            <path fill="#00acc1" d="M24,9.604c-6.4,0-10.4,3.199-12,9.597c2.4-3.199,5.2-4.398,8.4-3.599 c1.826,0.456,3.131,1.781,4.576,3.247C27.328,21.236,30.051,24,36,24c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.6 c-1.825-0.456-3.13-1.781-4.575-3.247C32.672,12.367,29.948,9.604,24,9.604L24,9.604z M12,24c-6.4,0-10.4,3.199-12,9.598 c2.4-3.199,5.2-4.399,8.4-3.599c1.825,0.457,3.13,1.781,4.575,3.246c2.353,2.388,5.077,5.152,11.025,5.152 c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.599c-1.826-0.456-3.131-1.781-4.576-3.246C20.672,26.764,17.949,24,12,24 L12,24z"></path>
+                        </svg>
+                        <i class="text-8xl text-yellow-300 fa-brands fa-js"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a id="CartaProyecto3" class="h-96 bg-cyan-700 flex items-center justify-around m-6 p-6 rounded-2xl border-4 border-white ">
+                <div class="h-80">
+                    <img class="h-full w-full m-auto rounded-3xl" alt="luego se me ocurre algo" src={crud.src}>
+                </div>
+                <div class="block justify-center p-5 items-center ">
+                    <h1 class="text-right text-5xl text-white m-5 brillo">CRUD RestApi</h1>
+                    <div class="m-5 grid grid-cols-2 gap-2">
+                        <i class="text-8xl text-cyan-500 fa-brands fa-react"></i>
+                        <i class="text-8xl text-violet-600 fa-brands fa-bootstrap"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                            <path fill="#8bc34a" d="M43.982,23.635c0.069-4.261-0.891-9.328-2.891-15.273l-1.568-4.662l-2.13,4.433 c-0.114,0.237-0.244,0.469-0.38,0.698C33.514,5.827,28.974,4,24,4C12.954,4,4,12.954,4,24c0,11.046,8.954,20,20,20s20-8.954,20-20 C44,23.877,43.984,23.758,43.982,23.635z"></path><path fill="#fff" d="M39.385 32.558c-3.123 4.302-8.651 4.533-13.854 4.442H18.75h-1.938c4.428-1.593 7.063-1.972 9.754-3.4 5.068-2.665 10.078-8.496 11.121-14.562-1.93 5.836-7.779 10.85-13.109 12.889-3.652 1.393-10.248 2.745-10.248 2.745l-.267-.145C9.573 32.268 9.437 22.214 17.6 18.968c3.574-1.423 6.993-.641 10.854-1.593 4.122-1.012 8.89-4.208 10.83-8.375C41.456 15.667 44.07 26.106 39.385 32.558L39.385 32.558zM15.668 38.445C15.386 38.795 14.955 39 14.505 39c-.823 0-1.495-.677-1.495-1.5s.677-1.5 1.495-1.5c.341 0 .677.118.941.336C16.086 36.855 16.186 37.805 15.668 38.445L15.668 38.445z"></path>
+                        </svg>
+                        <i class="text-8xl text-blue-400 fa-solid fa-database"></i>
+                    </div>
+                </div>
+            </a>            
+        </div>
+
+    </section>
+    <h1 id="Contacto" class="m-10 text-6xl text-white text-center" >Contacto</h1>
+    <section class="flex items-center justify-center">
+
+        <div class="block m-5 ">
+            <form class="block" action="https://formsubmit.co/08fa499aeff733aeef82d3087501d09b" method="POST">
+                <label class="text-white text-2xl m-2">Nombres:</label>
+                <br>
+                <input class="m-2 text-xl pl-4 p-2 rounded-lg outline-0 w-80" type="text" name="name" id="">
+                <br>
+                <label class="text-white text-2xl m-2 ">Correo:</label>
+                <br>
+                <input class="m-2 text-xl pl-4 p-2 rounded-lg outline-0 w-80" type="text" name="email" id="">
+                <br>
+                <label class="text-white text-2xl m-2">Titulo:</label>
+                <br>
+                <input class="m-2 text-xl pl-4 p-2 rounded-lg outline-0 w-80" type="text" name="titulo" id="">
+                <br>
+                <label class="text-white text-2xl m-2">Mensaje:</label>
+                <br>
+                <textarea class="m-2 text-xl pl-4 p-2 rounded-lg outline-0 w-80" name="comentario"></textarea>
+                <br>
+                <div class="flex items-center justify-center">
+                    <input class="m-auto border border-white bg-white text-black text-center p-4 rounded-lg  hover:bg-slate-400 hover:border-slate-400 hover:shadow-xl hover:shadow-white" type="submit" value="Enviar">
+                </div>
+            </form>
+        </div>
+    </section>
+
+</Layout>
+
+<style>
+    .carta_Presentacion{
+        background: rgb(0,212,255);
+        background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(9,9,119,1) 100%);
+    }
+    /*
+    #57B7EB
+    #5B5EEB
+    #5B8BEA
+    #5BE6EB
+    #885BEB
+    */
+</style>
+
